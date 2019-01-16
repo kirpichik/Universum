@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,43 +15,47 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/chat_image"
+            android:id="@+id/network_image"
             android:layout_width="@dimen/chat_image_size"
             android:layout_height="@dimen/chat_image_size"
             android:src="@mipmap/ic_launcher_round"
             android:scaleType="fitXY"/>
 
         <ImageView
-            android:id="@+id/type_image"
+            android:id="@+id/error_image"
             android:layout_width="@dimen/type_image_size"
             android:layout_height="@dimen/type_image_size"
-            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="bottom|end"
             android:scaleType="fitXY"
-            android:layout_gravity="bottom|end"/>
+            app:srcCompat="@android:drawable/presence_busy"
+            android:visibility="invisible"/>
 
     </android.support.design.widget.CoordinatorLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/chat_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/chat_name_size"
-            android:layout_marginStart="8dp"
-            tools:text="Chat name"/>
-
-        <TextView
-            android:id="@+id/last_message"
+            android:id="@+id/network_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:textSize="@dimen/last_message_size"
-            android:layout_marginStart="16dp"
-            tools:text="last message"/>
+            android:layout_weight="3"
+            android:textSize="@dimen/network_name_size"
+            android:layout_marginStart="8dp"
+            tools:text="Network name"/>
+
+        <ImageButton
+            android:id="@+id/remove_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            app:srcCompat="@android:drawable/ic_delete"
+            android:background="@color/white" />
+
     </LinearLayout>
 
 </LinearLayout>

@@ -1,6 +1,5 @@
 package ru.nsu.mobile.ban.universum.fragments;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -56,7 +55,7 @@ public class ChatListFragment extends Fragment {
         //TODO replace null to chats list
         updateChatsList(null);
 
-        addButton = view.findViewById(R.id.addFloatingActionButton);
+        addButton = view.findViewById(R.id.addChatFloatingActionButton);
         addButton.setOnClickListener(l -> addChat());
 
         return  view;
