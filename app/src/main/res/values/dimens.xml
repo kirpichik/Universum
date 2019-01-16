@@ -1,4 +1,10 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="select_size">18sp</dimen>
+
+    <dimen name="chat_image_size">64dp</dimen>
+    <dimen name="type_image_size">24dp</dimen>
+
+    <dimen name="chat_name_size">16sp</dimen>
+    <dimen name="last_message_size">12sp</dimen>
 </resources>

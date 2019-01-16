@@ -5,7 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import ru.nsu.mobile.ban.universum.MainActivity;
 import ru.nsu.mobile.ban.universum.R;
@@ -31,17 +33,33 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ChatHo
 
     @Override
     public void onBindViewHolder(@NonNull ChatHolder chatHolder, int i) {
+        //TODO replace all null to something ;)
+        chatHolder.chatImage.setImageBitmap(null);
+        chatHolder.typeImage.setImageBitmap(null);
+        chatHolder.chatName.setText(null);
+        chatHolder.lastMessage.setText(null);
 
+        //TODO replace null to chat fragment
+        chatHolder.itemView.setOnClickListener(l -> activity.changeFragment(null));
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return chats.length;
     }
 
     public static class ChatHolder extends RecyclerView.ViewHolder {
+        public ImageView chatImage;
+        public ImageView typeImage;
+        public TextView chatName;
+        public TextView lastMessage;
+
         public ChatHolder(@NonNull View itemView) {
             super(itemView);
+            chatImage = itemView.findViewById(R.id.chat_image);
+            typeImage = itemView.findViewById(R.id.type_image);
+            chatName = itemView.findViewById(R.id.chat_name);
+            lastMessage = itemView.findViewById(R.id.last_message);
         }
     }
 }
