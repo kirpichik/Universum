@@ -52,8 +52,8 @@ public class ChatListFragment extends Fragment {
         chatsRecycleView.setLayoutManager(manager);
         DividerItemDecoration decoration = new DividerItemDecoration(chatsRecycleView.getContext(), manager.getOrientation());
         chatsRecycleView.addItemDecoration(decoration);
-        //TODO replace null to chats list
-        updateChatsList(null);
+        //TODO replace new String[0] to chats list
+        updateChatsList(new String[0]);
 
         addButton = view.findViewById(R.id.addChatFloatingActionButton);
         addButton.setOnClickListener(l -> addChat());
@@ -71,24 +71,24 @@ public class ChatListFragment extends Fragment {
         switch (select) {
             case ALL:
                 selectAll.setBackgroundColor(getResources().getColor(R.color.select_color, null));
-                selectVK.setBackgroundColor(Color.WHITE);
-                selectTelegram.setBackgroundColor(Color.WHITE);
-                //TODO select all chats and replace null
-                updateChatsList(null);
+                selectVK.setBackgroundColor(Color.TRANSPARENT);
+                selectTelegram.setBackgroundColor(Color.TRANSPARENT);
+                //TODO select all chats and replace new String[0]
+                updateChatsList(new String[0]);
                 break;
             case VK:
-                selectAll.setBackgroundColor(Color.WHITE);
+                selectAll.setBackgroundColor(Color.TRANSPARENT);
                 selectVK.setBackgroundColor(getResources().getColor(R.color.select_color, null));
-                selectTelegram.setBackgroundColor(Color.WHITE);
-                //TODO select vk chats and replace null
-                updateChatsList(null);
+                selectTelegram.setBackgroundColor(Color.TRANSPARENT);
+                //TODO select vk chats and replace new String[0]
+                updateChatsList(new String[0]);
                 break;
             case TELEGRAM:
-                selectAll.setBackgroundColor(Color.WHITE);
-                selectVK.setBackgroundColor(getResources().getColor(R.color.select_color, null));
-                selectTelegram.setBackgroundColor(Color.WHITE);
-                //TODO select telegram chats and replace null
-                updateChatsList(null);
+                selectAll.setBackgroundColor(Color.TRANSPARENT);
+                selectVK.setBackgroundColor(Color.TRANSPARENT);
+                selectTelegram.setBackgroundColor(getResources().getColor(R.color.select_color, null));
+                //TODO select telegram chats and replace new String[0]
+                updateChatsList(new String[0]);
                 break;
         }
     }

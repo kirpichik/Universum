@@ -54,7 +54,7 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             app:srcCompat="@android:drawable/ic_delete"
-            android:background="@color/white" />
+            android:background="@color/TRANSPARENT" />
 
     </LinearLayout>
 

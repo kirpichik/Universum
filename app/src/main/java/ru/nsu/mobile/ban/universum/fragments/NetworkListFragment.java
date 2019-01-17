@@ -35,8 +35,8 @@ public class NetworkListFragment extends Fragment {
         networksRecyclerView.setLayoutManager(manager);
         DividerItemDecoration decoration = new DividerItemDecoration(networksRecyclerView.getContext(), manager.getOrientation());
         networksRecyclerView.addItemDecoration(decoration);
-        //TODO replace null to networks list
-        updateNetworksList(null);
+        //TODO replace new String[0] to networks list
+        updateNetworksList(new String[0]);
 
         addButton = view.findViewById(R.id.addNetworkFloatingActionButton);
         addButton.setOnClickListener(l -> addNetwork());
