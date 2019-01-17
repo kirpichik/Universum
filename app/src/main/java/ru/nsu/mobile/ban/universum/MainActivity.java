@@ -8,8 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import ru.nsu.mobile.ban.universum.fragments.ChatListFragment;
 
 public class MainActivity extends AppCompatActivity {
-
-
+    
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
