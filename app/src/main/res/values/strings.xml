@@ -13,4 +13,6 @@
 
     <string name="telegram_phone">Номер телефона:</string>
     <string name="telegram_code">Код из смс:</string>
+
+    <string name="message_hint">Введите сообщение</string>
 </resources>
